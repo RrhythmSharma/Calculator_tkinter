@@ -74,6 +74,12 @@ cebutton = Button(win, text='CE', width=4, command=lambda: clearall(), fg='black
                                                                                                           column=1,
                                                                                                           stick='e')
 
+def enter(event):
+    equate()
+
+
+result.bind('<Return>',enter)
+
 
 def set_text(text):
     result.insert(END, text)
@@ -99,6 +105,5 @@ def equate():
     else:
         result.delete(0, END)
         result.insert(0, value)
-
 
 win.mainloop()
